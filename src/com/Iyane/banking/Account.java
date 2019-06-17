@@ -2,6 +2,8 @@
 
 package com.Iyane.banking;
 
+import java.util.Scanner;
+
 public class Account {
     private String accountNumber;
     private String password;
@@ -75,31 +77,36 @@ public class Account {
 
     //입금하기
     public void deposit(long depositMoney) {
+        Scanner scan = new Scanner(System.in);
         if (depositMoney <= 0) {
             System.out.println("정확한 금액을 입력하십시오.");
+            scan.nextLine();
             return;
-        } else {
-            System.out.println("정상적으로 입금되었습니다.");
-            setBalance(getBalance() + depositMoney);
-            System.out.println("입금액 : " + depositMoney);
-            System.out.println("잔액 : " + getBalance());
         }
+        System.out.println("정상적으로 입금되었습니다.");
+        setBalance(getBalance() + depositMoney);
+        System.out.printf("입금액 : %,d원\n", depositMoney);
+        System.out.printf("잔액 : %,d원\n", getBalance());
+        scan.nextLine();
     }
 
     //출금하기
     public void withdraw(long withdrawMoney) {
+        Scanner scan = new Scanner(System.in);
         if (withdrawMoney >= balance) {
             System.out.println("잔액이 부족합니다.");
+            scan.nextLine();
             return;
         } else if (withdrawMoney <= 0) {
             System.out.println("정확한 금액을 입력하십시오.");
+            scan.nextLine();
             return;
-        } else {
-            System.out.println("정상적으로 출금되었습니다.");
-            setBalance(getBalance() + withdrawMoney);
-            System.out.println("출금액 : " + withdrawMoney);
-            System.out.println("잔액 : " + getBalance());
         }
+        System.out.println("정상적으로 출금되었습니다.");
+        setBalance(getBalance() - withdrawMoney);
+        System.out.printf("출금액 : %,d원\n", withdrawMoney);
+        System.out.printf("잔액 : %,d원\n", getBalance());
+        scan.nextLine();
     }
 
     //계좌정보 조회
