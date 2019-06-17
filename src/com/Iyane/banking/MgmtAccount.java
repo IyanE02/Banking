@@ -31,7 +31,7 @@ public class MgmtAccount {
         StringBuilder stringBuilder = new StringBuilder();
 
         for (int i = 0; i < num; i++) {
-            stringBuilder.append(referenceChars.indexOf((int) (Math.random() * referenceChars.length())));
+            stringBuilder.append(referenceChars.indexOf((int) (Math.random() % referenceChars.length())));
         }
 
         return stringBuilder.toString();
@@ -170,6 +170,7 @@ public class MgmtAccount {
         }
     }
 
+    //모든 고객정보 출력
     public static void accountInfos() {
         for (int i = 0; i < index; i++) {
             System.out.println(i + "번 고객 정보");
@@ -178,6 +179,81 @@ public class MgmtAccount {
     }
 
     public static void main(String[] args) {
-        return;
+        Account[] objects = new Account[100];
+        MgmtAccount mgmt = new MgmtAccount();
+        Scanner scan = new Scanner(System.in);
+
+        boolean isExit = false;
+
+        while(true){
+            System.out.println("====== 로컬 은행 관리 시스템 ======");
+            System.out.println("1. 계좌 개설");
+            System.out.println("2. 잔액 조회");
+            System.out.println("3. 입금");
+            System.out.println("4. 출금");
+            System.out.println("5. 모든 고객정보 출력");
+            System.out.println("6. 종료");
+            System.out.println();
+            System.out.println("원하시는 항목을 선택하시고 Enter를 누르십시오.");
+
+            int menu = scan.nextInt();
+            switch (menu){
+                case 1:
+                    mgmt.cls();
+                    System.out.println("계좌 개설 메뉴로 진입합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    mgmt.createAccount();
+                    break;
+                case 2:
+                    mgmt.cls();
+                    System.out.println("잔액 조회 메뉴로 진입합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    mgmt.displayBalance();
+                    break;
+                case 3:
+                    mgmt.cls();
+                    System.out.println("입금 메뉴로 진입합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    mgmt.inputMoney();
+                    break;
+                case 4:
+                    mgmt.cls();
+                    System.out.println("출금 메뉴로 진입합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    mgmt.outputMoney();
+                    break;
+                case 5:
+                    mgmt.cls();
+                    System.out.println("관리자 암호를 입력하여 주십시오.");
+                    String admin = scan.nextLine();
+                    admin = scan.nextLine();
+                    String admins = "qwerty1234";
+                    if(admin.equals(admins)){
+                        mgmt.cls();
+                        mgmt.accountInfos();
+                    }
+                    else {
+                        System.out.println();
+                        System.out.println("권한이 없습니다.");
+                        scan.nextLine();
+                        mgmt.cls();
+                        return;
+                    }
+                case 6:
+                    mgmt.cls();
+                    System.out.println("종료합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    return;
+                default:
+                    System.out.println("잘못 입력하셨습니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+            }
+        }
     }
 }
