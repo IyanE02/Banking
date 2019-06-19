@@ -109,6 +109,34 @@ public class Account {
         scan.nextLine();
     }
 
+    //송금용 입금하기
+    public void depositToSend(long depositMoney) {
+        Scanner scan = new Scanner(System.in);
+        if (depositMoney <= 0) {
+            return;
+        }
+        setBalance(getBalance() + depositMoney);
+    }
+
+    //송금용 출금하기
+    public void withdrawToSend(long withdrawMoney) {
+        Scanner scan = new Scanner(System.in);
+        if (withdrawMoney >= balance) {
+            System.out.println("잔액이 부족합니다.");
+            scan.nextLine();
+            return;
+        } else if (withdrawMoney <= 0) {
+            System.out.println("정확한 금액을 입력하십시오.");
+            scan.nextLine();
+            return;
+        }
+        System.out.println("정상적으로 송금되었습니다.");
+        setBalance(getBalance() - withdrawMoney);
+        System.out.printf("송금액 : %,d원\n", withdrawMoney);
+        System.out.printf("잔액 : %,d원\n", getBalance());
+        scan.nextLine();
+    }
+
     //계좌정보 조회
     public void getInfo() {
         System.out.println("계좌번호 : " + getAccountNumber());

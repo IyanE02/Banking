@@ -15,7 +15,7 @@ public class MgmtAccount {
         }
     }
 
-    //계좌 확인
+    //계좌
     public static int findAccount(String accountNumber) {
         for (int i = 0; i < accounts.size(); i++) {   //저장된 계좌들을 전부 조회함
             if (accounts.get(i).getAccountNumber().equals(accountNumber)) {
@@ -80,6 +80,7 @@ public class MgmtAccount {
         System.out.println();
         System.out.printf("계좌번호 : ");
         String accountNumber = scan.nextLine();
+        System.out.println();
 
         int index = findAccount(accountNumber); //계좌의 인덱스 탐색
 
@@ -89,6 +90,7 @@ public class MgmtAccount {
             mgmt.cls();
             return;
         } else {
+            System.out.println("이름 : " + accounts.get(index).getName());
             System.out.printf("잔액 : %,d원\n", accounts.get(index).getBalance());
             scan.nextLine();
             mgmt.cls();
@@ -105,6 +107,7 @@ public class MgmtAccount {
         System.out.println();
         System.out.printf("계좌번호 : ");
         String accountNumber = scan.nextLine();
+        System.out.println();
 
         int index = findAccount(accountNumber); //계좌의 인덱스 탐색
 
@@ -136,6 +139,7 @@ public class MgmtAccount {
         System.out.println();
         System.out.printf("계좌번호 : ");
         String accountNumber = scan.nextLine();
+        System.out.println();
 
         int index = findAccount(accountNumber); //계좌의 인덱스 탐색
 
@@ -171,6 +175,84 @@ public class MgmtAccount {
         }
     }
 
+    //송금
+    public static void sendMoney() {
+        MgmtAccount mgmt = new MgmtAccount();
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("당신의 계좌번호를 입력하십시오.");
+        System.out.println();
+        System.out.printf("계좌번호 : ");
+        String myAccountNumber = scan.nextLine();
+        System.out.println();
+
+        int myIndex = findAccount(myAccountNumber); //계좌의 인덱스 탐색
+
+        if (myIndex == -1) { //리턴받은 인덱스가 오류인 -1일 경우 정확하게 입력하라는 문구 출력
+            System.out.println("정확한 계좌번호를 입력하여 주십시오.");
+            scan.nextLine();
+            mgmt.cls();
+            return;
+        } else {
+            System.out.println("비밀번호를 입력하십시오.");
+            System.out.println();
+            System.out.printf("비밀번호 : ");
+            String password = scan.nextLine();
+            System.out.println();
+
+            if (accounts.get(myIndex).getPassword().equals(password)) {
+                System.out.println("받는 사람의 계좌번호를 입력하십시오.");
+                System.out.println();
+                System.out.printf("계좌번호 : ");
+                String yourAccountNumber = scan.nextLine();
+                System.out.println();
+
+                int yourIndex = findAccount((yourAccountNumber));
+
+                if (yourIndex == -1) { //리턴받은 인덱스가 오류인 -1일 경우 정확하게 입력하라는 문구 출력
+                    System.out.println("정확한 계좌번호를 입력하여 주십시오.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    return;
+                } else {
+                    mgmt.cls();
+                    System.out.println(accounts.get(yourIndex).getName() + "님이 맞으십니까?");
+                    System.out.println("\n" + "Y or N");
+
+                    String isItRight = scan.nextLine();
+                    mgmt.cls();
+
+                    if (isItRight.equals("Y") || isItRight.equals("y")) {
+                        System.out.println("송금액을 입력하십시오.");
+                        System.out.println();
+                        System.out.printf("송금액 : ");
+                        long amount = scan.nextLong();
+                        System.out.println();
+
+                        accounts.get(myIndex).withdrawToSend(amount); //내 계좌에서 출금 실행
+                        accounts.get(yourIndex).depositToSend(amount); //상대방 계좌에 입금 실행
+                        scan.nextLine();
+                        mgmt.cls();
+                        return;
+                    } else if (isItRight.equals("N") || isItRight.equals("n")) {
+                        System.out.println("송금을 취소합니다.");
+                        scan.nextLine();
+                        return;
+                    } else {
+                        System.out.println("잘못 입혁하여 송금을 취소합니다.");
+                        scan.nextLine();
+                        return;
+                    }
+                }
+            } else {
+                System.out.println("비밀번호가 일치하지 않습니다.");
+                scan.nextLine();
+                mgmt.cls();
+                return;
+            }
+        }
+    }
+
     //모든 고객정보 출력
     public static void accountInfos() {
         Scanner scan = new Scanner(System.in);
@@ -185,13 +267,15 @@ public class MgmtAccount {
         MgmtAccount mgmt = new MgmtAccount();
         Scanner scan = new Scanner(System.in);
 
+        String adminPassword = "admin";
+
         while (true) {
             System.out.println("====== 로컬 은행 관리 시스템 ======");
             System.out.println("1. 계좌 개설");
             System.out.println("2. 잔액 조회");
             System.out.println("3. 입금");
             System.out.println("4. 출금");
-            System.out.println("5. 모든 고객정보 출력");
+            System.out.println("5. 송금");
             System.out.println("6. 종료");
             System.out.println();
             System.out.println("원하시는 항목을 선택하시고 Enter를 누르십시오.");
@@ -232,11 +316,24 @@ public class MgmtAccount {
                     break;
                 case 5:
                     mgmt.cls();
+                    System.out.println("송금 메뉴로 진입합니다.");
+                    scan.nextLine();
+                    scan.nextLine();
+                    mgmt.cls();
+                    mgmt.sendMoney();
+                    break;
+                case 6:
+                    mgmt.cls();
+                    System.out.println("종료합니다.");
+                    scan.nextLine();
+                    mgmt.cls();
+                    return;
+                case 2627:
+                    mgmt.cls();
                     System.out.println("관리자 암호를 입력하여 주십시오.");
                     String admin = scan.nextLine();
                     admin = scan.nextLine();
-                    String admins = "qwerty1234";
-                    if (admin.equals(admins)) {
+                    if (admin.equals(adminPassword)) {
                         mgmt.cls();
                         mgmt.accountInfos();
                         break;
@@ -247,12 +344,6 @@ public class MgmtAccount {
                         mgmt.cls();
                         break;
                     }
-                case 6:
-                    mgmt.cls();
-                    System.out.println("종료합니다.");
-                    scan.nextLine();
-                    mgmt.cls();
-                    return;
                 default:
                     System.out.println("잘못 입력하셨습니다.");
                     scan.nextLine();
