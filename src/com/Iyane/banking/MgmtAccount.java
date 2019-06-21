@@ -1,12 +1,12 @@
 package com.Iyane.banking;
 
-import java.lang.reflect.Method;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MgmtAccount {
-    private static ArrayList<Account> accounts = new ArrayList<>();
+    public static ArrayList<Account> accounts = new ArrayList<>();
 
     //단순히 80줄 넘겨 cls의 역할 대체
     public void cls() {
@@ -259,17 +259,22 @@ public class MgmtAccount {
         for (int i = 0; i < accounts.size(); i++) {
             System.out.println(i + 1 + "번 고객 정보");
             accounts.get(i).getInfo();
-            scan.nextLine();
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         MgmtAccount mgmt = new MgmtAccount();
         Scanner scan = new Scanner(System.in);
+        Excel excel = new Excel();
 
         String adminPassword = "admin";
 
+        excel.readExecl();
+
         while (true) {
+
+            excel.writeExcel();
+
             System.out.println("====== 로컬 은행 관리 시스템 ======");
             System.out.println("1. 계좌 개설");
             System.out.println("2. 잔액 조회");
@@ -280,62 +285,56 @@ public class MgmtAccount {
             System.out.println();
             System.out.println("원하시는 항목을 선택하시고 Enter를 누르십시오.");
 
-            int menu = scan.nextInt();
+            String menu = scan.nextLine();
             switch (menu) {
-                case 1:
+                case "1":
                     mgmt.cls();
                     System.out.println("계좌 개설 메뉴로 진입합니다.");
-                    scan.nextLine();
                     scan.nextLine();
                     mgmt.cls();
                     mgmt.createAccount();
                     break;
-                case 2:
+                case "2":
                     mgmt.cls();
                     System.out.println("잔액 조회 메뉴로 진입합니다.");
-                    scan.nextLine();
                     scan.nextLine();
                     mgmt.cls();
                     mgmt.displayBalance();
                     break;
-                case 3:
+                case "3":
                     mgmt.cls();
                     System.out.println("입금 메뉴로 진입합니다.");
-                    scan.nextLine();
                     scan.nextLine();
                     mgmt.cls();
                     mgmt.inputMoney();
                     break;
-                case 4:
+                case "4":
                     mgmt.cls();
                     System.out.println("출금 메뉴로 진입합니다.");
-                    scan.nextLine();
                     scan.nextLine();
                     mgmt.cls();
                     mgmt.outputMoney();
                     break;
-                case 5:
+                case "5":
                     mgmt.cls();
                     System.out.println("송금 메뉴로 진입합니다.");
-                    scan.nextLine();
                     scan.nextLine();
                     mgmt.cls();
                     mgmt.sendMoney();
                     break;
-                case 6:
+                case "6":
                     mgmt.cls();
                     System.out.println("종료합니다.");
-                    scan.nextLine();
-                    mgmt.cls();
                     return;
-                case 2627:
+                case "view":
                     mgmt.cls();
                     System.out.println("관리자 암호를 입력하여 주십시오.");
-                    String admin = scan.nextLine();
+                    String admin;
                     admin = scan.nextLine();
                     if (admin.equals(adminPassword)) {
                         mgmt.cls();
                         mgmt.accountInfos();
+                        scan.nextLine();
                         mgmt.cls();
                         break;
                     } else {

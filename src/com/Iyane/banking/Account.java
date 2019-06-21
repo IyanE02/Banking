@@ -143,7 +143,7 @@ public class Account {
         System.out.println("비밀번호 : " + getPassword());
         System.out.println("예금주명 : " + getName());
         System.out.println("생년월일 : " + getBirth());
-        System.out.println("계좌잔고 : " + getBalance());
+        System.out.printf("계좌잔고 : %,d원\n", getBalance());
         System.out.println();
         return;
     }
