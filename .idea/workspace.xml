@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Banking:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfedfc2e-8d7b-4612-af64-497667511c2c" name="Default Changelist" comment="" />
+    <list default="true" id="cfedfc2e-8d7b-4612-af64-497667511c2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,43 +22,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="-1553">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
-                <element signature="method#Account#0;class#Account#0" />
-                <element signature="method#Account#1;class#Account#0" />
-                <element signature="method#deposit#0;class#Account#0" />
-                <element signature="e#1573#1684#1" />
-                <element signature="method#withdraw#0;class#Account#0" />
-                <element signature="e#2068#2174#1" />
-                <element signature="e#2204#2315#1" />
-                <element signature="method#depositToSend#0;class#Account#0" />
-                <element signature="method#getInfo#0;class#Account#0" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="e#993#994#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1234#1235#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
+                <element signature="e#1312#1313#0" expanded="true" />
+                <element signature="e#1342#1343#0" expanded="true" />
+                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="265" column="43" selection-start-line="265" selection-start-column="43" selection-end-line="265" selection-end-column="43" />
+            <state relative-caret-position="130">
+              <caret line="314" column="39" lean-forward="true" selection-start-line="314" selection-start-column="39" selection-end-line="314" selection-end-column="39" />
               <folding>
-                <element signature="method#cls#0;class#MgmtAccount#0" />
-                <element signature="e#326#371#1" />
-                <element signature="method#findAccount#0;class#MgmtAccount#0" />
-                <element signature="method#randomString#0;class#MgmtAccount#0" />
-                <element signature="method#createAccount#0;class#MgmtAccount#0" />
-                <element signature="method#displayBalance#0;class#MgmtAccount#0" />
-                <element signature="method#inputMoney#0;class#MgmtAccount#0" />
-                <element signature="method#outputMoney#0;class#MgmtAccount#0" />
-                <element signature="method#sendMoney#0;class#MgmtAccount#0" />
-                <element signature="method#accountInfos#0;class#MgmtAccount#0" />
-                <element signature="method#main#0;class#MgmtAccount#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +82,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/Iyane/banking/OutputMoney.java" />
         <option value="$PROJECT_DIR$/src/com/Iyane/banking/Banking.java" />
-        <option value="$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java" />
         <option value="$PROJECT_DIR$/src/com/Iyane/banking/Account.java" />
+        <option value="$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java" />
       </list>
     </option>
   </component>
@@ -90,7 +99,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,6 +122,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,7 +182,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -228,38 +237,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="-1553">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="method#Account#0;class#Account#0" />
-            <element signature="method#Account#1;class#Account#0" />
-            <element signature="method#deposit#0;class#Account#0" />
-            <element signature="e#1573#1684#1" />
-            <element signature="method#withdraw#0;class#Account#0" />
-            <element signature="e#2068#2174#1" />
-            <element signature="e#2204#2315#1" />
-            <element signature="method#depositToSend#0;class#Account#0" />
-            <element signature="method#getInfo#0;class#Account#0" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#993#994#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+            <element signature="e#1342#1343#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="265" column="43" selection-start-line="265" selection-start-column="43" selection-end-line="265" selection-end-column="43" />
+        <state relative-caret-position="130">
+          <caret line="314" column="39" lean-forward="true" selection-start-line="314" selection-start-column="39" selection-end-line="314" selection-end-column="39" />
           <folding>
-            <element signature="method#cls#0;class#MgmtAccount#0" />
-            <element signature="e#326#371#1" />
-            <element signature="method#findAccount#0;class#MgmtAccount#0" />
-            <element signature="method#randomString#0;class#MgmtAccount#0" />
-            <element signature="method#createAccount#0;class#MgmtAccount#0" />
-            <element signature="method#displayBalance#0;class#MgmtAccount#0" />
-            <element signature="method#inputMoney#0;class#MgmtAccount#0" />
-            <element signature="method#outputMoney#0;class#MgmtAccount#0" />
-            <element signature="method#sendMoney#0;class#MgmtAccount#0" />
-            <element signature="method#accountInfos#0;class#MgmtAccount#0" />
-            <element signature="method#main#0;class#MgmtAccount#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -270,10 +280,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Banking:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

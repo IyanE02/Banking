@@ -336,6 +336,7 @@ public class MgmtAccount {
                     if (admin.equals(adminPassword)) {
                         mgmt.cls();
                         mgmt.accountInfos();
+                        mgmt.cls();
                         break;
                     } else {
                         System.out.println();
