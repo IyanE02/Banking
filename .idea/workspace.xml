@@ -22,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
+            <state relative-caret-position="1445">
               <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
               <folding>
                 <element signature="e#610#611#0" expanded="true" />
@@ -53,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="85">
               <caret line="8" column="27" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,6 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -137,7 +138,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -197,7 +197,7 @@
   <component name="ToolWindowManager">
     <frame x="183" y="73" width="1483" height="893" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.098383695" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09978918" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -257,20 +257,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar!/org/apache/poi/xssf/usermodel/XSSFCell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="400" column="14" selection-start-line="400" selection-start-column="14" selection-end-line="400" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-4.1.0.jar!/org/apache/poi/ss/usermodel/CellType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar!/org/apache/poi/xssf/usermodel/XSSFCell.class" />
+    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-4.1.0.jar!/org/apache/poi/ss/usermodel/CellType.class" />
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/jdk/internal/loader/BuiltinClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -292,13 +280,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar!/org/apache/poi/openxml4j/opc/OPCPackage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/OneDrive/바탕 화면/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar!/org/apache/poi/openxml4j/opc/OPCPackage.class" />
     <entry file="jar://$PROJECT_DIR$/poi-bin-4.1.0-20190412/poi-4.1.0/poi-ooxml-4.1.0.jar!/org/apache/poi/xssf/usermodel/XSSFCell.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -308,7 +290,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
+        <state relative-caret-position="1445">
           <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
           <folding>
             <element signature="e#610#611#0" expanded="true" />
@@ -337,7 +319,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Iyane/banking/MgmtAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="85">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
